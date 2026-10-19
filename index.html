@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Aftab Alam | Bioinformatician & Postdoctoral Researcher</title>
+<meta name="description" content="Academic portfolio of Dr. Aftab Alam, Postdoctoral Researcher at UAEU: multi-omics integration, systems biology and precision medicine.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="main-header">
+  <a href="#top" class="brand">Aftab Alam<span>, PhD</span></a>
+  <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+  <nav class="nav-list" id="nav-list">
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#vision">Vision</a>
+    <a class="nav-link" href="#experience">Experience</a>
+    <a class="nav-link" href="#publications">Publications</a>
+    <a class="nav-link" href="#skills">Skills</a>
+    <a class="nav-link" href="#education">Education</a>
+    <a class="nav-link" href="#grants">Grants</a>
+    <a class="nav-link" href="#gallery">Gallery</a>
+    <a class="nav-link" href="#contact">Contact</a>
+  </nav>
+  <div class="controls">
+    <button class="icon-btn" onclick="openSearch()" title="Search (Ctrl+K)" aria-label="Search"><i class="fas fa-search"></i></button>
+    <button class="icon-btn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme"><i class="fas fa-moon theme-icon"></i></button>
+  </div>
+</header>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <video class="hero-video" autoplay muted loop playsinline aria-label="PPI interaction animation">
+    <source src="PPI-interaction.mp4" type="video/mp4">
+  </video>
+  <div class="hero-main">
+    <figure class="hero-photo">
+      <img src="photo.png" alt="Portrait of Dr. Aftab Alam" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-fallback" style="display:none">AA</div>
+    </figure>
+    <div class="hero-inner">
+      <p class="eyebrow">Postdoctoral Researcher · Bioinformatics</p>
+      <h1>Dr. Aftab Alam</h1>
+      <p class="hero-sub">College of Medicine and Health Sciences, United Arab Emirates University, Al Ain, UAE</p>
+      <p class="hero-obj">Bioinformatician with expertise in multi-omics data integration, systems biology, and precision medicine, seeking to contribute to research initiatives that translate large-scale biological data into therapeutic and diagnostic advances.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#publications"><i class="fas fa-book-open"></i> Publications</a>
+        <a class="btn" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+      <div class="profile-links" id="profile-links"></div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-value" data-target="42" data-suffix="+">42+</span><span class="stat-label">Journal articles</span></div>
+    <div class="stat"><span class="stat-value" data-target="770" data-suffix="+">770+</span><span class="stat-label">Citations</span></div>
+    <div class="stat"><span class="stat-value" data-target="15">15</span><span class="stat-label">h-index</span></div>
+    <div class="stat"><span class="stat-value" data-target="21">21</span><span class="stat-label">i10-index</span></div>
+    <div class="stat"><span class="stat-value" data-target="7" data-suffix="+">7+</span><span class="stat-label">Years in bioinformatics</span></div>
+  </div>
+  <p class="stat-note">Metrics as reported on Google Scholar. Books/book chapters: 1 / 3.</p>
+</section>
+
+<!-- RECENT PUBLICATIONS (running ticker) -->
+<section id="recent" class="section reveal">
+  <h2><i class="fas fa-bolt"></i> Recent Publications</h2>
+  <div class="marquee" id="recent-marquee" aria-label="Recent publications, scrolling">
+    <div class="marquee-track" id="recent-track"></div>
+  </div>
+  <p class="muted small">Hover to pause. <a href="#publications">See the full list →</a></p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <h2>About &amp; Research Interests</h2>
+  <p class="lead">Over seven years of bioinformatics experience, specialising in multi-omics data analysis across transcriptomics, proteomics, metabolomics, and microbiomics, with expertise in biological networks and systems biology, drug design and development, and personalised medicine.</p>
+  <div class="chips" id="interests"></div>
+  <div class="actions-row">
+    <button class="btn" onclick="summarise()"><i class="fas fa-wand-magic-sparkles"></i> Quick summary</button>
+  </div>
+  <div id="summary-box" class="result-box" style="display:none"></div>
+</section>
+
+<!-- RESEARCH VISION -->
+<section id="vision" class="section reveal">
+  <h2><i class="fas fa-flask-vial"></i> Research Vision &amp; Lab Strategy</h2>
+  <div class="vision-box">
+    <p class="lead">
+      I am actively seeking an <strong>Assistant Professorship</strong> with the clear objective of establishing an
+      independent research group focused on <strong>multi-omics</strong>, <strong>computational biology</strong>,
+      <strong>AI/ML</strong>, <strong>network-based biomedical research</strong>, and
+      <strong>collaborative translational research</strong>.
+    </p>
+  </div>
+  <div class="card-grid vision-cards">
+    <article class="card">
+      <i class="fas fa-layer-group vision-ico"></i>
+      <h3>Multi-Omics Integration</h3>
+      <p>Building scalable pipelines that unify transcriptomics, proteomics, metabolomics, and microbiomics into coherent, interpretable biological stories.</p>
+    </article>
+    <article class="card">
+      <i class="fas fa-robot vision-ico"></i>
+      <h3>AI/ML for Biomedicine</h3>
+      <p>Developing and applying machine learning, deep learning, and explainable AI models to uncover biomarkers, drug targets, and patient-stratification signatures.</p>
+    </article>
+    <article class="card">
+      <i class="fas fa-diagram-project vision-ico"></i>
+      <h3>Network-Based Research</h3>
+      <p>Leveraging protein–protein interaction and gene-regulatory networks to decode disease mechanisms and identify synthetic-lethal and repurposable drug targets.</p>
+    </article>
+    <article class="card">
+      <i class="fas fa-handshake-angle vision-ico"></i>
+      <h3>Translational Collaboration</h3>
+      <p>Partnering with clinicians, experimental biologists, and industry to translate computational findings into diagnostics and therapeutic strategies.</p>
+    </article>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section reveal">
+  <h2>Postdoctoral Training</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <span class="tl-date">2023 – Present</span>
+      <h3>Postdoctoral Researcher</h3>
+      <p>United Arab Emirates University (UAEU), Al-Ain, UAE</p>
+    </div>
+    <div class="tl-item">
+      <span class="tl-date">2022 – 2023</span>
+      <h3>Postdoctoral Researcher</h3>
+      <p>Memorial Sloan Kettering Cancer Center (MSKCC), New York City, USA</p>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="section reveal">
+  <h2>Publications</h2>
+  <p class="muted">Listed in reverse chronological order, 2026 back to 2021. † denotes equal contribution.</p>
+  <div class="pub-tools">
+    <div class="search-wrap">
+      <i class="fas fa-search"></i>
+      <input id="pub-search" type="search" placeholder="Search title, author, journal, year…" oninput="filterPubs()" aria-label="Search publications">
+    </div>
+    <div class="tag-row" id="tag-row"></div>
+  </div>
+  <p id="pub-status" class="muted small"></p>
+  <ol class="pub-list" id="pub-list"></ol>
+
+  <h3 class="sub">Manuscripts Submitted / Under Preparation (2026–2027)</h3>
+  <ul class="pub-list pipeline" id="pipeline-list"></ul>
+
+  <h3 class="sub">Publication &amp; Citation Overview</h3>
+  <table class="overview">
+    <thead><tr><th>Type of Publication</th><th>Number</th></tr></thead>
+    <tbody>
+      <tr><td>Articles in International Refereed Journals</td><td>More than 42 (Google Scholar)</td></tr>
+      <tr><td>Books / Book Chapters</td><td>1 / 3</td></tr>
+      <tr><td>Number of Citations</td><td>More than 770 (Google Scholar)</td></tr>
+      <tr><td>h-index / i10-index</td><td>15 / 21 (Google Scholar)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+  <h2>Professional Skills</h2>
+  <div class="skill-grid" id="skill-grid"></div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section reveal">
+  <h2>Academic Qualifications</h2>
+  <div class="card-grid">
+    <article class="card"><span class="badge">2021</span><h3>Ph.D.</h3><p>Centre for Interdisciplinary Research in Basic Sciences, JMI University, New Delhi, India.</p><p class="muted small"><em>Thesis:</em> Network Meta-Analysis of Human Gene Expression Profiles to Identify Potential Therapeutic Targets for Tuberculosis Infection.</p></article>
+    <article class="card"><span class="badge">2015</span><h3>M.Phil.</h3><p>Centre for Interdisciplinary Research in Basic Sciences, JMI University, New Delhi, India.</p></article>
+    <article class="card"><span class="badge">2013</span><h3>M.Sc. Bioinformatics</h3><p>Jamia Millia Islamia University, New Delhi, India.</p></article>
+    <article class="card"><span class="badge">2010</span><h3>B.Sc. (Hons.) Chemistry</h3><p>Aligarh Muslim University, India.</p></article>
+  </div>
+  <h3 class="sub">Scientific Societies</h3>
+  <p>Life Member, <strong>Bioinformatics and Drug Discovery Society</strong> (BIDDS17-133), India.</p>
+</section>
+
+<!-- GRANTS -->
+<section id="grants" class="section reveal">
+  <h2>Key Achievements: Projects &amp; Grants Awarded</h2>
+  <div class="card-grid">
+    <article class="card"><span class="badge">2019 – 2021</span><h3>Young Scientist Fellowship</h3><p>Principal Investigator (PI). Department of Health Research (DHR), Govt. of India. Ref. No. R.12014/06/2019-HR. 04/2019 – 10/2021 (2.5 years).</p></article>
+    <article class="card"><span class="badge">2019</span><h3>Senior Research Fellow (SRF)</h3><p>Indian Council of Medical Research (ICMR), New Delhi, India. Awarded in 2019 for 3 years. Ref. No. ISRM/11(63)/2019.</p></article>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section reveal">
+  <h2>Lab Gallery</h2>
+  <p class="muted">Moments from our lab. Click a photo to enlarge.</p>
+  <div class="gallery-grid" id="gallery-grid"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <div>
+      <p><i class="fas fa-building-columns"></i> College of Medicine and Health Sciences, United Arab Emirates University, Al Ain, UAE</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:aftabal@uaeu.ac.ae">aftabal@uaeu.ac.ae</a>
+         <button class="mini" onclick="copyText('aftabal@uaeu.ac.ae', this)" title="Copy email"><i class="fas fa-copy"></i></button></p>
+      <p><i class="fas fa-phone"></i> +917 55 599 6324</p>
+    </div>
+    <form id="contact-form" onsubmit="return sendMail(event)">
+      <input id="c-name" placeholder="Your name" required>
+      <input id="c-subject" placeholder="Subject" required>
+      <textarea id="c-message" rows="5" placeholder="Your message" required></textarea>
+      <button class="btn primary" type="submit"><i class="fas fa-paper-plane"></i> Send </button>
+    </form>
+  </div>
+</section>
+</main>
+
+
+<footer>
+  <p class="eyebrow">RESEARCH & COLLABORATION</p>
+  <h2>Have a research idea?</h2>
+  <p>I welcome opportunities for research collaboration, scientific discussions, and speaking engagements that advance innovation and interdisciplinary research.</p>
+  <p>
+    <a href="mailto:aftabal@uaeu.ac.ae">aftabal@uaeu.ac.ae</a>
+    <span aria-hidden="true"> | </span>
+    <a href="mailto:aftab07alig@gmail.com">aftab07alig@gmail.com</a>
+  </p>
+  <p class="muted small">© <span id="yr"></span> Dr. Aftab Alam · All rights reserved.</p>
+</footer>
+
+
+<!-- scroll progress / back to top -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="48" height="48" viewBox="0 0 48 48"><circle class="ring-bg" cx="24" cy="24" r="21"/><circle class="progress-ring__circle" cx="24" cy="24" r="21"/></svg>
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- section rail -->
+<div id="section-rail" aria-hidden="true"></div>
+
+<!-- Chat assistant -->
+<button id="chat-toggle" onclick="toggleChat()" aria-label="Open assistant"><i class="fas fa-comments"></i></button>
+<div id="chat-window" role="dialog" aria-label="CV assistant">
+  <div class="chat-head"><strong>CV Assistant</strong><button class="mini" onclick="toggleChat()" aria-label="Close"><i class="fas fa-xmark"></i></button></div>
+  <div id="chat-body"></div>
+  <div class="chat-quick" id="chat-quick"></div>
+  <div class="chat-input"><input id="chat-input" placeholder="Ask about Dr. Alam's work…" onkeydown="if(event.key==='Enter')sendChat()"><button class="btn primary" onclick="sendChat()"><i class="fas fa-paper-plane"></i></button></div>
+</div>
+
+<!-- Search palette -->
+<div id="srch-overlay" onclick="if(event.target===this)closeSearch()">
+  <div class="srch-box">
+    <input id="srch-input" placeholder="Search the whole site… (Esc to close)" autocomplete="off">
+    <div id="srch-body"></div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="lb-btn lb-close" onclick="closeLightbox()" aria-label="Close"><i class="fas fa-xmark"></i></button>
+  <button class="lb-btn lb-prev" onclick="lbMove(-1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button class="lb-btn lb-next" onclick="lbMove(1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- Modal -->
+<div id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box"><button class="mini close" onclick="closeModal()" aria-label="Close"><i class="fas fa-xmark"></i></button><div id="modal-content"></div></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
