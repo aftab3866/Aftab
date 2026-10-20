@@ -143,15 +143,7 @@ Life Member, **Bioinformatics and Drug Discovery Society (BIDDS)**, India.
 
 Membership ID: BIDDS17-133
 
----
 
-## Research Collaboration
-
-I welcome opportunities for research collaboration, scientific discussions, and speaking engagements that advance innovation and interdisciplinary research.
-
-I am particularly interested in collaborative projects involving computational biology, multi-omics integration, AI-driven biomedical discovery, systems biology, and precision medicine.
-
----
 
 ## Contact
 
@@ -165,7 +157,3 @@ Al Ain, United Arab Emirates
 **Additional Email:** [aftab07alig@gmail.com](mailto:aftab07alig@gmail.com)
 
 **Phone:** +917 55 599 6324
-
----
-
-© 2026 Dr. Aftab Alam. All rights reserved.
