@@ -460,7 +460,7 @@ function toggleChat() {
   w.style.display = open ? 'flex' : 'none';
   if (open) {
     if (!$('#chat-body').children.length) {
-      chatAdd("Hi! I can answer questions about Dr. Alam's research, publications, education and grants, using only the information in his CV.", 'bot');
+      chatAdd("Hi! I'm Aftab's AI Assistant. Ask me about his research, publications, career, or how to collaborate..", 'bot');
       $('#chat-quick').innerHTML = QUICK.map(q => `<button onclick="quickChat('${q}')">${q}</button>`).join('');
     }
     setTimeout(() => $('#chat-input').focus(), 60);
