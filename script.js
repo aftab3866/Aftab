@@ -12,7 +12,7 @@ const CONFIG = {
     { label: "Google Scholar", icon: "fas fa-graduation-cap", url: "https://scholar.google.com/citations?user=PwA6xWsAAAAJ&hl=en" },
     { label: "ResearchGate", icon: "fab fa-researchgate", url: "https://www.researchgate.net/profile/Aftab-Alam-12/research" },
     { label: "GitHub", icon: "fab fa-github", url: "https://github.com/aftab3866" },
-    { label: "ORCID", icon: "fab fa-orcid", url: "https://orcid.org/my-orcid?orcid=0000-0002-6989-9398" },
+    { label: "ORCID", icon: "fab fa-orcid", url: "https://orcid.org/0000-0002-6989-9398" },
     { label: "Scopus", icon: "fas fa-database", url: "https://www.scopus.com/authid/detail.uri?authorId=57191078261&origin=AuthorEval" }
   ]
 };
