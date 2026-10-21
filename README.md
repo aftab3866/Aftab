@@ -1,7 +1,7 @@
 # Dr. Aftab Alam, PhD
-### Postdoctoral Researcher | Bioinformatician | Computational Biology
 
-**College of Medicine and Health Sciences, United Arab Emirates University (UAEU), Al Ain, UAE**
+![Postdoctoral Researcher](3.png)
+
 
 Bioinformatician with expertise in multi-omics data integration, systems biology, and precision medicine, focused on translating large-scale biological data into therapeutic and diagnostic advances.
 
