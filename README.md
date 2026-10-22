@@ -3,7 +3,7 @@
 ![Postdoctoral Researcher](33.png)
 
 
-Bioinformatician with expertise in multi-omics data integration, systems biology, and precision medicine, focused on translating large-scale biological data into therapeutic and diagnostic advances.
+Dr. Aftab is a Bioinformatician with expertise in multi-omics data integration, systems biology, and precision medicine, focused on translating large-scale biological data into therapeutic and diagnostic advances.
 
 [Email](mailto:aftabal@uaeu.ac.ae) · [Publications](#publications) · [Research Vision](#research-vision--lab-strategy) · [Contact](#contact)
 
