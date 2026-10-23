@@ -277,3 +277,38 @@ footer{text-align:center;padding:2rem 1rem 3rem;border-top:1px solid var(--borde
 }
 .vision-cards .card h3{margin:.2rem 0 .4rem;font-size:1.05rem}
 .vision-cards .card p{margin:0;font-size:.92rem;color:var(--muted)}
+
+/* Important Links - blinking navigation button */
+.important-links-btn {
+  color: #ffd166 !important;
+  font-weight: 700;
+  border: 1px solid #ffd166;
+  border-radius: 6px;
+  padding: 8px 12px;
+  animation: importantLinksBlink 1.2s infinite;
+  white-space: nowrap;
+}
+
+.important-links-btn:hover {
+  background: #ffd166;
+  color: #172033 !important;
+  animation: none;
+}
+
+@keyframes importantLinksBlink {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(255, 209, 102, 0.25);
+  }
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 12px rgba(255, 209, 102, 0.7);
+  }
+}
+
+/* Respect reduced-motion accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+  .important-links-btn {
+    animation: none;
+  }
+}
