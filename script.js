@@ -137,10 +137,8 @@ function renderStatic() {
       <span class="pub-title">${esc(p.title)}</span>
       <div class="pub-authors">${boldMe(p.authors)}</div>
       <div class="pub-meta"><em>${esc(p.journal)}</em></div></li>`).join('');
-  $('#section-rail').innerHTML = ['recent', 'about', 'vision', 'experience', 'publications', 'skills', 'education', 'grants', 'gallery', 'contact']
-    .map(id => `<button class="rail-dot" data-target="${id}" data-label="${id[0].toUpperCase() + id.slice(1)}" aria-label="${id}"></button>`).join('');
+$('#section-rail').innerHTML = ['recent', 'about', 'vision', 'experience', 'publications', 'skills', 'education', 'grants', 'gallery', 'important-links', 'contact'].map(id => `<button class="rail-dot" data-target="${id}" data-label="${id[0].toUpperCase() + id.slice(1)}" aria-label="${id}"></button>`).join('');
 }
-
 /* ---------- publications ---------- */
 let pubTag = 'all';
 function renderPubs() {
