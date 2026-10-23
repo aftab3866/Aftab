@@ -284,7 +284,7 @@ function renderRecent() {
    Put your photos in the "gallery" folder and list them here.
    Add or remove lines freely; captions are optional. */
 const GALLERY = [
-  { src: 'gallery/1.png', caption: 'Our research lab' },
+  { src: 'gallery/1.png', caption: 'My Mentor & Research Team' },
   { src: 'gallery/2.png', caption: 'Team at work' },
   { src: 'gallery/3.png', caption: 'Lab equipment' },
   { src: 'gallery/lab4.png', caption: 'Group meeting' },
