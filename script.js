@@ -33,6 +33,7 @@ const DATA = {
     ["fa-cube", "Structural Bioinformatics"],
     ["fa-diagram-project", "Project Management"],
     ["fa-handshake", "Interpersonal and Collaboration Skills"],
+   ["fa-chalkboard-user", "Teaching Experience: PhD Teaching Assistant in Bioinformatics, Advanced Bioinformatics Tools, Systems Biology and Applications, Microarray Data Analysis, and Structural Bioinformatics; Postdoctoral Teaching Experience at UAEU in Advanced Immunology (BMSC 713; CRN 25132), covering Systems Immunology and data preprocessing."],
     ["fa-user-doctor", "Personalized Medicine and Health Informatics"]
   ],
   /* tags drive the filter buttons */
