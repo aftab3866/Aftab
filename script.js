@@ -5,7 +5,7 @@
 
 const CONFIG = {
   name: "Dr. Aftab Alam",
-  email: "aftabal@uaeu.ac.ae",
+  email: "aftabal@uaeu.ac.ae", "aftab07alig@gmail.com"
   /* Replace "#" with your real profile URLs. */
   links: [
     { label: "LinkedIn", icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/aftab-jmi/" },
