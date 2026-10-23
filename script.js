@@ -23,19 +23,20 @@ const DATA = {
     "Pharmacogenomics", "Structure-Based Bioinformatics", "AI/ML for Omics Analysis", "Metabolomics and  Microbiome Data Science",
     "Personalized Medicine", "Network and Systems Biology", "Big Data Analyses"
   ],
-  skills: [
+  
+skills: [
     ["fa-layer-group", "Multi-Omics Data Integration and Systems Biology"],
     ["fa-robot", "Machine Learning and AI in Bioinformatics"],
     ["fa-bacteria", "Metagenomics and Microbiome Analysis"],
-    ["fa-code", "Scripting experience with R/Python"],
-    ["fa-chalkboard-user", "Bioinformatics education and mentoring"],
-    ["fa-pen-nib", "Manuscript drafting and grant writing"],
+    ["fa-code", "R and Python Programming"],
+    ["fa-chalkboard-user", "Advanced Bioinformatics Teaching, Training and Mentoring"],
+    ["fa-pen-nib", "Scientific Writing, Manuscript Preparation and Grant Writing"],
     ["fa-cube", "Structural Bioinformatics"],
-    ["fa-diagram-project", "Project Management"],
-    ["fa-handshake", "Interpersonal and Collaboration Skills"],
-    ["fa-user-doctor", "Personalized Medicine and Health Informatics"],
-    ["fa-chalkboard-user", "Teaching Experience: PhD Teaching Assistant in Advanced Bioinformatics Tools, Systems Biology and Applications, Omics Data Analysis, and Structural Bioinformatics"]
+    ["fa-diagram-project", "Project Management and Research Coordination"],
+    ["fa-handshake", "Scientific Collaboration and Interpersonal Skills"],
+    ["fa-user-doctor", "Personalized Medicine and Health Informatics"]
   ],
+   
   /* tags drive the filter buttons */
   pubs: [
     { year: 2026, authors: "Aftab Alam, Siddiqui MF, Kali S, Labania L, Attoub S, Fernandez-Cabezudo MJ, Al-Ramadi BK",
