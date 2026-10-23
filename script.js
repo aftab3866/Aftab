@@ -2,11 +2,12 @@
    Dr. Aftab Alam — portfolio script
    All content below comes from the CV. Edit DATA to update the site.
    ============================================================ */
-
 const CONFIG = {
   name: "Dr. Aftab Alam",
-  email: "aftabal@uaeu.ac.ae", "aftab07alig@gmail.com"
-  /* Replace "#" with your real profile URLs. */
+  email: "aftabal@uaeu.ac.ae",
+  secondaryEmail: "aftab07alig@gmail.com",
+
+   /* Replace "#" with your real profile URLs. */
   links: [
     { label: "LinkedIn", icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/aftab-jmi/" },
     { label: "Google Scholar", icon: "fas fa-graduation-cap", url: "https://scholar.google.com/citations?user=PwA6xWsAAAAJ&hl=en" },
