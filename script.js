@@ -2,19 +2,43 @@
    Dr. Aftab Alam — portfolio script
    All content below comes from the CV. Edit DATA to update the site.
    ============================================================ */
+
 const CONFIG = {
   name: "Dr. Aftab Alam",
   email: "aftabal@uaeu.ac.ae",
   secondaryEmail: "aftab07alig@gmail.com",
 
-   /* Replace "#" with your real profile URLs. */
   links: [
-    { label: "LinkedIn", icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/aftab-jmi/" },
-    { label: "Google Scholar", icon: "fas fa-graduation-cap", url: "https://scholar.google.com/citations?user=PwA6xWsAAAAJ&hl=en" },
-    { label: "ResearchGate", icon: "fab fa-researchgate", url: "https://www.researchgate.net/profile/Aftab-Alam-12/research" },
-    { label: "GitHub", icon: "fab fa-github", url: "https://github.com/aftab3866" },
-    { label: "ORCID", icon: "fab fa-orcid", url: "https://orcid.org/0000-0002-6989-9398" },
-    { label: "Scopus", icon: "fas fa-database", url: "https://www.scopus.com/authid/detail.uri?authorId=57191078261&origin=AuthorEval" }
+    {
+      label: "LinkedIn",
+      icon: "fab fa-linkedin",
+      url: "https://www.linkedin.com/in/aftab-jmi/"
+    },
+    {
+      label: "Google Scholar",
+      icon: "fas fa-graduation-cap",
+      url: "https://scholar.google.com/citations?user=PwA6xWsAAAAJ&hl=en"
+    },
+    {
+      label: "ResearchGate",
+      icon: "fab fa-researchgate",
+      url: "https://www.researchgate.net/profile/Aftab-Alam-12/research"
+    },
+    {
+      label: "GitHub",
+      icon: "fab fa-github",
+      url: "https://github.com/aftab3866"
+    },
+    {
+      label: "ORCID",
+      icon: "fab fa-orcid",
+      url: "https://orcid.org/0000-0002-6989-9398"
+    },
+    {
+      label: "Scopus",
+      icon: "fas fa-database",
+      url: "https://www.scopus.com/authid/detail.uri?authorId=57191078261&origin=AuthorEval"
+    }
   ]
 };
 
