@@ -365,3 +365,12 @@ footer {
   margin-top: 0;
   padding-top: 0.5rem;
 }
+/* Remove excess space before the footer */
+#contact {
+  margin-bottom: 0 !important;
+}
+
+footer {
+  margin-top: 0 !important;
+  padding-top: 1rem !important;
+}
