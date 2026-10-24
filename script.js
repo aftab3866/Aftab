@@ -531,24 +531,3 @@ document.addEventListener('DOMContentLoaded', () => {
   renderStatic(); renderPubs(); renderRecent(); renderGallery(); initScroll(); initReveal(); runCounters(); initBg();
 });
 
-
-/* Visitor Counter */
-(function () {
-  var counter = document.getElementById('visitor-count');
-  if (!counter) return;
-
-  var script = document.createElement('script');
-  script.src = 'https://counterapi.com/c.js';
-  script.async = true;
-
-  script.onload = function () {
-    // The CounterAPI embed script manages its own counter display.
-    // Verify that the service updates the visitor-counter element.
-  };
-
-  script.onerror = function () {
-    counter.textContent = 'Unavailable';
-  };
-
-  document.head.appendChild(script);
-})();
