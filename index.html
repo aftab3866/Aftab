@@ -7,6 +7,58 @@
 <meta name="description" content="Academic portfolio of Dr. Aftab Alam, Postdoctoral Researcher at UAEU: multi-omics integration, systems biology and precision medicine.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+
+<!-- NEW: styles for map, WhatsApp button and visitor counter -->
+<style>
+  /* Google Map */
+  .map-wrap {
+    margin-top: 1.5rem;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(128,128,128,.25);
+    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  }
+  .map-wrap iframe { display: block; width: 100%; height: 380px; border: 0; }
+  .map-link { display: inline-block; margin-top: .6rem; font-size: .9rem; }
+
+  /* WhatsApp floating button (sits above the AI assistant button) */
+  #whatsapp-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 92px;               /* adjust if it overlaps other floating buttons */
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0,0,0,.3);
+    z-index: 999;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  #whatsapp-btn:hover { transform: scale(1.08); box-shadow: 0 8px 22px rgba(0,0,0,.38); }
+  #whatsapp-btn .wa-tip {
+    position: absolute; right: 66px;
+    background: #111; color: #fff;
+    padding: 5px 10px; border-radius: 6px;
+    font-size: 13px; white-space: nowrap;
+    opacity: 0; pointer-events: none;
+    transition: opacity .2s ease;
+  }
+  #whatsapp-btn:hover .wa-tip { opacity: 1; }
+
+  /* Visitor counter */
+  .visitor-counter {
+    display: inline-flex; align-items: center; gap: .5rem;
+    margin-top: .5rem;
+    padding: .35rem .9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(128,128,128,.35);
+    font-size: .9rem;
+  }
+  .visitor-counter strong { font-variant-numeric: tabular-nums; letter-spacing: .5px; }
+</style>
 </head>
 <body>
 
@@ -292,6 +344,19 @@
       <button class="btn primary" type="submit"><i class="fas fa-paper-plane"></i> Send </button>
     </form>
   </div>
+
+  <!-- NEW: Google Map -->
+  <div class="map-wrap">
+    <iframe
+      title="Map: United Arab Emirates University, Al Ain"
+      src="https://maps.google.com/maps?q=United%20Arab%20Emirates%20University%2C%20Al%20Ain&amp;z=14&amp;output=embed"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=United+Arab+Emirates+University+Al+Ain" target="_blank" rel="noopener noreferrer">
+    <i class="fas fa-location-dot"></i> Open in Google Maps
+  </a>
 </section>
 </main>
 
@@ -305,6 +370,12 @@
     <span aria-hidden="true"> | </span>
     <a href="mailto:aftab07alig@gmail.com">aftab07alig@gmail.com</a>
   </p>
+
+  <!-- NEW: Visitor counter -->
+  <p class="visitor-counter" title="Total visits to this site">
+    <i class="fas fa-eye"></i> Visitors: <strong id="visitor-count">…</strong>
+  </p>
+
   <p class="muted small">© <span id="yr"></span> Dr. Aftab Alam · All rights reserved.</p>
 </footer>
 
@@ -317,6 +388,14 @@
 
 <!-- section rail -->
 <div id="section-rail" aria-hidden="true"></div>
+
+<!-- NEW: WhatsApp button (above the AI assistant button) -->
+<a id="whatsapp-btn"
+   href="https://wa.me/971555996324?text=Hello%20Dr.%20Alam%2C%20I%20visited%20your%20website."
+   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tip">Chat on WhatsApp</span>
+</a>
 
 <!-- Chat assistant -->
 <button id="chat-toggle" onclick="toggleChat()" aria-label="Open assistant"><i class="fas fa-comments"></i></button>
@@ -347,5 +426,26 @@
 <div id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box"><button class="mini close" onclick="closeModal()" aria-label="Close"><i class="fas fa-xmark"></i></button><div id="modal-content"></div></div></div>
 
 <script src="script.js"></script>
+
+<!-- NEW: visitor counter logic -->
+<script>
+(function () {
+  var el = document.getElementById('visitor-count');
+  if (!el) return;
+  var base = 'https://api.counterapi.dev/v1/aftab-alam-portfolio/site-visits/';
+  var counted = false;
+  try { counted = sessionStorage.getItem('visit-counted') === '1'; } catch (e) {}
+
+  // Count once per browser session; otherwise just read the current total.
+  fetch(base + (counted ? '' : 'up'))
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var n = (d && (d.count !== undefined ? d.count : d.value));
+      el.textContent = Number(n).toLocaleString();
+      try { sessionStorage.setItem('visit-counted', '1'); } catch (e) {}
+    })
+    .catch(function () { el.textContent = '—'; });
+})();
+</script>
 </body>
 </html>
