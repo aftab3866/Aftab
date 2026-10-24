@@ -427,25 +427,11 @@
 
 <script src="script.js"></script>
 
-<!-- NEW: visitor counter logic -->
-<script>
-(function () {
-  var el = document.getElementById('visitor-count');
-  if (!el) return;
-  var base = 'https://api.counterapi.dev/v1/aftab-alam-portfolio/site-visits/';
-  var counted = false;
-  try { counted = sessionStorage.getItem('visit-counted') === '1'; } catch (e) {}
+<!-- NEW: Visitor Counter -->
+<div class="visitor-counter">
+  <span>Website Visitors:</span>
+  <strong id="visitor-count">Loading...</strong>
+</div>
 
-  // Count once per browser session; otherwise just read the current total.
-  fetch(base + (counted ? '' : 'up'))
-    .then(function (r) { return r.json(); })
-    .then(function (d) {
-      var n = (d && (d.count !== undefined ? d.count : d.value));
-      el.textContent = Number(n).toLocaleString();
-      try { sessionStorage.setItem('visit-counted', '1'); } catch (e) {}
-    })
-    .catch(function () { el.textContent = '—'; });
-})();
-</script>
 </body>
 </html>
